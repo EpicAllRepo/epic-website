@@ -1,0 +1,40 @@
+// "use client";
+
+// import Link from "next/link";
+
+// interface LogoImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+//   variant?: "header" | "footer";
+//   size?: "sm" | "md" | "lg" | number;
+//   href?: string;
+//   showText?: boolean;
+//   className?: string;
+// }
+
+// export default function LogoImage({
+//   variant = "header",
+//   size,
+//   href = "/",
+//   className = "",
+//   ...rest
+// }: LogoImageProps) {
+//   // Default size based on variant
+//   let dimension = "h-8"; // default
+
+//   if (size === "sm") dimension = "h-6";
+//   else if (size === "md") dimension = "h-8";
+//   else if (size === "lg") dimension = "h-12";
+//   else if (typeof size === 'number') dimension = `h-[${size}px]`;
+//   else if (variant === "footer") dimension = "h-10";
+
+//   return (
+//     <Link href={href} className="flex items-center gap-2">
+//       <img
+//         src="/logo.png"
+//         alt="Logo"
+//         className={`${dimension} ${className}`}
+//         {...rest}
+//       />
+      
+//     </Link>
+//   );
+// }
