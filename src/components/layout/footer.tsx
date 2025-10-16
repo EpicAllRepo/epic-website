@@ -40,11 +40,11 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {companyarry?.map((items, index) => {
                                     return (
-                                        <>
+                                        
                                             <li key={index}>
                                                 <Link href={items.link} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
                                             </li>
-                                        </>
+                                        
                                     )
                                 })}
                             </ul>
@@ -54,11 +54,11 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {resourcesarry?.map((items, index) => {
                                     return (
-                                        <>
+                                        
                                             <li key={index}>
                                                 <Link href={items.link} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
                                             </li>
-                                        </>
+                                        
                                     )
                                 })}
                             </ul>
@@ -68,11 +68,11 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {legalarry?.map((items, index) => {
                                     return (
-                                        <>
+                                         
                                             <li key={index}>
                                                 <Link href={items.link} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
                                             </li>
-                                        </>
+                                        
                                     )
                                 })}
                             </ul>

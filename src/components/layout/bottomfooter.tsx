@@ -15,7 +15,7 @@ export default function BootomFooter() {
     href={item.url || "#"}
     key={index}
     aria-label={item.label}
-    className="text-xl hover:text-red-500 transition"
+    className="w-10 h-10 bg-black/[0.02] border border-black/10 flex items-center justify-center hover:bg-[#E53935] hover:border-[#E53935] transition-all duration-300 group"
   >
     {item.icon}
   </Link>
@@ -28,9 +28,9 @@ export default function BootomFooter() {
 
 
 const socialarry = [
-  { icon: <PiInstagramLogoLight />, url: "/", label: "Instagram" },
-  { icon: <SlSocialFacebook />, url: "/", label: "Facebook" },
-  { icon: <SlSocialLinkedin />, url: "/", label: "LinkedIn" },
-  { icon: <LiaSmsSolid />, url: "/", label: "Email" },
-  { icon: <PiWhatsappLogo />, url: "/", label: "WhatsApp" },
+  { icon: <PiInstagramLogoLight className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors" />, url: "/", label: "Instagram" },
+  { icon: <SlSocialFacebook className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors" />, url: "/", label: "Facebook" },
+  { icon: <SlSocialLinkedin className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors" />, url: "/", label: "LinkedIn" },
+  { icon: <LiaSmsSolid className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors" />, url: "/", label: "Email" },
+  { icon: <PiWhatsappLogo className="w-4 h-4 text-gray-600 group-hover:text-white transition-colors" />, url: "/", label: "WhatsApp" },
 ];
