@@ -59,7 +59,7 @@ export function Hero() {
         {/* Logo background (replace /epic-logo.png with your actual file path) */}
         <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[600px] h-[600px] opacity-[0.06] pointer-events-none">
           <Image
-            src="/epic-logo.png"
+            src="/430758e90aef2906bebcc4fbb30b4921d5e5d98e.png"
             alt="Epic Logo"
             width={600}
             height={600}
