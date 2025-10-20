@@ -64,7 +64,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-bold text-black mb-6 tracking-tight ">Legal</h4>
+                            <h4 className="font-bold text-black mb-6 tracking-tight ">Industries</h4>
                             <ul className="space-y-3">
                                 {legalarry?.map((items, index) => {
                                     return (
