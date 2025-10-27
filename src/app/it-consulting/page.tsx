@@ -2,12 +2,10 @@
 import CoreValues from "@/components/common/corevalues";
 import CTABox from "@/components/common/cta";
 import PageBanner from "@/components/common/pagebanner";
-import {  FaArrowRight, FaRegClock, FaRegHeart, FaWrench } from "react-icons/fa";
-import { FiHeadphones, FiServer, FiSmartphone, FiZap } from "react-icons/fi";
-import { GoDatabase, GoZap } from "react-icons/go";
-import { IoLockClosedOutline } from "react-icons/io5";
-import { LuCodeXml, LuUsers, LuUsersRound } from "react-icons/lu";
-import { MdOutlineLightbulb, MdOutlineShoppingCart } from "react-icons/md";
+import {  FaRegClock, FaWrench } from "react-icons/fa";
+import { FiHeadphones, FiServer } from "react-icons/fi";
+import { LuUsersRound } from "react-icons/lu";
+import { MdOutlineLightbulb } from "react-icons/md";
 
 export default function ItConsultingSupportpage() {
   return (
@@ -21,6 +19,8 @@ export default function ItConsultingSupportpage() {
       />
 
       {/* Core Values Section */}
+      <section className="py-24 bg-white">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="mb-12 text-center px-4">
         <div className="flex items-center justify-center gap-3 mb-6">
         <div className="w-12 h-0.5 bg-[#E53935]"> </div>
@@ -37,51 +37,52 @@ export default function ItConsultingSupportpage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-20">
         <CoreValues
-           
-        boxhoverbar
+       headinghover
           icon={<MdOutlineLightbulb className="w-7 h-7 text-white" />}
           title="Strategic IT Consulting"
           desc="Technology roadmap planning, digital transformation strategy, and IT governance."
         />
         <CoreValues
-          
-        boxhoverbar
+   headinghover
           icon={<FaRegClock className="w-7 h-7 text-white" />}
           title="Infrastructure Planning"
           desc="Design and optimize IT infrastructure for performance, scalability, and cost-efficiency."
         />
         <CoreValues
-           
-        boxhoverbar
+headinghover
           icon={<FiHeadphones  className="w-7 h-7 text-white" />}
           title="24/7 IT Support"
           desc="Round-the-clock helpdesk support, incident management, and problem resolution."
         />
         <CoreValues
-           
-        boxhoverbar
+headinghover
           icon={<FaWrench className="w-7 h-7 text-white" />}
           title="Managed Services"
           desc="Complete IT operations management including monitoring, maintenance, and updates."
         />
          <CoreValues
-            
-        boxhoverbar
+headinghover
           icon={<LuUsersRound className="w-7 h-7 text-white" />}
           title="Training & Enablement"
           desc="User training programs, documentation, and knowledge transfer services."
         />
         <CoreValues
-           
-        boxhoverbar
+ headinghover
           icon={<FaRegClock className="w-7 h-7 text-white" />}
           title="Disaster Recovery"
           desc="Business continuity planning, backup solutions, and disaster recovery services."
         />
-        
       </div>
+      </div>
+      </section>
       
+
+
+<section className="py-24 bg-gray-50">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+
       <div className="mb-12 text-center px-4">
+         <div className="flex items-center justify-center gap-3 mb-6"><div className="w-12 h-0.5 bg-[#E53935]"></div><span className="text-[#E53935] text-sm font-semibold tracking-widest uppercase">Why Choose Us</span><div className="w-12 h-0.5 bg-[#E53935]"></div></div>
         <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight">
          Key Benefits
         </h3>
@@ -113,7 +114,8 @@ export default function ItConsultingSupportpage() {
           desc="Improve IT efficiency and reduce costs with proactive management and monitoring."
         />
       </div>
-
+</div>
+</section>
       
 <CTABox
 backgroundpattern={true}

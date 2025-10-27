@@ -2,8 +2,7 @@
 import { About } from "@/components/home/about";
 import { Clients } from "@/components/home/clients";
 import { Hero } from "@/components/home/hero";
-import Industries from "@/components/home/industries";
-import Image from "next/image";
+import Industries from "@/components/home/industries"; 
 
 export default function Home() {
   return (

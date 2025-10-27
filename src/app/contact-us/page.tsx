@@ -1,7 +1,6 @@
  
 "use client";
 import PageBanner from "@/components/common/pagebanner" ;
-import { BsSend } from "react-icons/bs";
 import { cn } from "@/lib/utils"; 
 import { LuMapPin } from "react-icons/lu"; 
 import AddressCard from "@/components/common/addresscard";
@@ -12,6 +11,7 @@ import { HiOutlineClock } from "react-icons/hi2";
 import Image from "next/image"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import ContactForm from "@/components/common/contactform";
+import Link from "next/link";
 
 export default function ContactPage() {
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
 <PageBanner
           subtitle="Get In Touch"
           title="Contact Us"
-          desc="We'd love to hear from you! Whether you have a question about our services, need technical support, or want to discuss a potential project, our team is ready to answer all your questions."
+          desc="We&apos;d love to hear from you! Whether you have a question about our services, need technical support, or want to discuss a potential project, our team is ready to answer all your questions."
         />
 
 <section className="relative py-32 bg-black/[0.02]">
@@ -32,7 +32,7 @@ export default function ContactPage() {
 <div>
 <div className="mb-8">
   <h2 className="text-4xl font-bold text-black mb-4 tracking-tight">Send Us a Message</h2>
-  <p className="text-lg text-gray-600 font-normal">Fill out the form below and we'll get back to you within 24 hours.</p>
+  <p className="text-lg text-gray-600 font-normal">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
 </div>
 
 
@@ -117,7 +117,7 @@ export default function ContactPage() {
   <div className="space-y-8">
   <div className="mb-8">
   <h2 className="text-4xl font-bold text-black mb-4 tracking-tight">Contact Information</h2>
-  <p className="text-lg text-gray-600 font-normal">Reach out to us through any of these channels. We're here to help!</p>
+  <p className="text-lg text-gray-600 font-normal">Reach out to us through any of these channels. We&apos;re here to help!</p>
 </div>
 
 
@@ -186,8 +186,8 @@ titlename="Business Hours"
                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight">Have a Project in Mind?</h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-normal">Let's discuss how we can help transform your business with our innovative solutions</p>
                 <div className="flex flex-wrap items-center justify-center gap-4">
-                  <a href="/#contact" className="inline-flex items-center gap-2 px-8 h-14 bg-white text-black font-semibold hover:bg-black hover:text-white transition-all duration-300">Send a Message</a>
-                <a href="/#contact" className="inline-flex items-center gap-2 px-8 h-14 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300">Explore Our Services</a>
+                  <Link href="/contact" className="inline-flex items-center gap-2 px-8 h-14 bg-white text-black font-semibold hover:bg-black hover:text-white transition-all duration-300">Send a Message</Link>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 h-14 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300">Explore Our Services</Link>
                 </div>
             </div>
         </div>

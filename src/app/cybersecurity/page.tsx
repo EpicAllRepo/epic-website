@@ -3,11 +3,10 @@ import CoreValues from "@/components/common/corevalues";
 import CTABox from "@/components/common/cta";
 import PageBanner from "@/components/common/pagebanner";
 import { CiCircleCheck } from "react-icons/ci";
-import { FaExclamationTriangle, FaLock, FaRegHeart, FaUserFriends } from "react-icons/fa";
-import { FiSmartphone, FiZap } from "react-icons/fi";
-import { GoDatabase, GoShieldCheck } from "react-icons/go";
-import { IoLockClosedOutline } from "react-icons/io5";
-import { LuCodeXml, LuFileSearch, LuUsers } from "react-icons/lu";
+import { FaLock } from "react-icons/fa";
+import { FiZap } from "react-icons/fi";
+import { GoShieldCheck } from "react-icons/go";
+import { LuFileSearch } from "react-icons/lu";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 export default function CybersecurityServicespage() {
@@ -22,6 +21,8 @@ export default function CybersecurityServicespage() {
       />
 
       {/* Core Values Section */}
+      <section className="py-24 bg-white">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="mb-12 text-center px-4">
         <div className="flex items-center justify-center gap-3 mb-6">
         <div className="w-12 h-0.5 bg-[#E53935]"> </div>
@@ -38,51 +39,53 @@ export default function CybersecurityServicespage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-20">
         <CoreValues
-           
-        boxhoverbar
+           headinghover
+        
           icon={<GoShieldCheck className="w-7 h-7 text-white" />}
           title="Security Audits"
           desc="Comprehensive security assessments, vulnerability scans, and compliance audits."
         />
         <CoreValues
-          
-        boxhoverbar
+headinghover
           icon={<MdOutlineShoppingCart className="w-7 h-7 text-white" />}
           title="Native Android Development"
           desc="Feature-rich Android apps using Kotlin and Jetpack for modern Android devices."
         />
         <CoreValues
-           
-        boxhoverbar
+headinghover
           icon={<LuFileSearch   className="w-7 h-7 text-white" />}
           title="Penetration Testing"
           desc="Ethical hacking and penetration tests to identify and fix security vulnerabilities."
         />
         <CoreValues
-           
-        boxhoverbar
+headinghover
           icon={<FaLock className="w-7 h-7 text-white" />}
           title="Data Protection"
           desc="Encryption, data loss prevention (DLP), and secure backup solutions."
         />
          <CoreValues
-            
-        boxhoverbar
+headinghover
           icon={<CiCircleCheck className="w-7 h-7 text-white" />}
           title="Compliance Solutions"
           desc="GDPR, HIPAA, SOC 2, ISO 27001 compliance management and certification support."
         />
         <CoreValues
-           
-        boxhoverbar
+headinghover
           icon={< GoShieldCheck className="w-7 h-7 text-white" />}
           title="Security Training"
           desc="Employee awareness programs and phishing simulation exercises."
         />
-        
       </div>
+      </div>
+      </section>
       
+
+
+
+      <section className="py-24 bg-gray-50">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="mb-12 text-center px-4">
+         <div className="flex items-center justify-center gap-3 mb-6"><div className="w-12 h-0.5 bg-[#E53935]"></div><span className="text-[#E53935] text-sm font-semibold tracking-widest uppercase">Why Choose Us</span><div className="w-12 h-0.5 bg-[#E53935]"></div></div>
         <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight">
          Key Benefits
         </h3>
@@ -114,6 +117,8 @@ export default function CybersecurityServicespage() {
           desc="Protect sensitive data with enterprise-grade encryption and access controls."
         />
       </div>
+      </div>
+      </section>
 
       
 <CTABox

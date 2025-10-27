@@ -1,6 +1,5 @@
 
 import { ReactNode } from "react";
-import { FiTarget } from "react-icons/fi";
 
 
 interface OurMissionProp {

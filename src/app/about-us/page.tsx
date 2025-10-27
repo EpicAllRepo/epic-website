@@ -95,7 +95,7 @@ desc="Maintaining transparency and ethical practices in all we do"
                 <div className="w-12 h-0.5 bg-[#E53935]"></div>
               </div>
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight">Our Team</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-normal">Meet the visionaries driving Epic Global's success and innovation</p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-normal">Meet the visionaries driving Epic Global&apos;s success and innovation</p>
             </div>
 
 

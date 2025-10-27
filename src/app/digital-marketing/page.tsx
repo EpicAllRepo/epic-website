@@ -3,13 +3,8 @@ import CoreValues from "@/components/common/corevalues";
 import CTABox from "@/components/common/cta";
 import PageBanner from "@/components/common/pagebanner";
 import { CiMail, CiShare2 } from "react-icons/ci";
-import {  FaArrowRight, FaRegHeart } from "react-icons/fa";
-import { FiSmartphone, FiTarget, FiZap } from "react-icons/fi";
-import { GoDatabase, GoZap } from "react-icons/go";
+import { FiTarget } from "react-icons/fi";
 import { IoIosTrendingUp, IoMdSearch } from "react-icons/io";
-import { IoLockClosedOutline } from "react-icons/io5";
-import { LuCodeXml, LuUsers } from "react-icons/lu";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaChartBar } from "react-icons/fa6";
 
 export default function DigitalMarketingSEOpage() {
@@ -24,7 +19,9 @@ export default function DigitalMarketingSEOpage() {
       />
 
       {/* Core Values Section */}
-      <div className="mb-12 text-center px-4">
+<section className="py-24 bg-white">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+<div className="mb-12 text-center px-4">
         <div className="flex items-center justify-center gap-3 mb-6">
         <div className="w-12 h-0.5 bg-[#E53935]"> </div>
       <span className="text-[#E53935] text-sm font-semibold tracking-widest uppercase">Our Services</span>
@@ -41,50 +38,58 @@ export default function DigitalMarketingSEOpage() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-20">
         <CoreValues
            
-        boxhoverbar
+headinghover
           icon={<IoMdSearch className="w-7 h-7 text-white" />}
           title="SEO Optimization"
           desc="Improve search rankings with technical SEO, on-page optimization, and link building strategies."
         />
         <CoreValues
           
-        boxhoverbar
+       headinghover
           icon={<CiMail className="w-7 h-7 text-white" />}
           title="Content Strategy"
           desc="Engaging content creation, blogging, and content marketing to attract and retain customers."
         />
         <CoreValues
            
-        boxhoverbar
+      headinghover
           icon={<CiShare2  className="w-7 h-7 text-white" />}
           title="Social Media Marketing"
           desc="Build brand presence and engage audiences across Facebook, Instagram, LinkedIn, and Twitter."
         />
         <CoreValues
            
-        boxhoverbar
+     headinghover
           icon={<FiTarget className="w-7 h-7 text-white" />}
           title="PPC Campaigns"
           desc="Targeted Google Ads and social media advertising for maximum ROI and conversions."
         />
          <CoreValues
            
-        boxhoverbar
+      headinghover
           icon={<FaChartBar className="w-7 h-7 text-white" />}
           title="Analytics & Reporting"
           desc="Track performance metrics, user behavior, and campaign effectiveness with detailed reports."
         />
         <CoreValues
            
-        boxhoverbar
+     headinghover
           icon={<IoIosTrendingUp className="w-7 h-7 text-white" />}
           title="Conversion Optimization"
           desc="A/B testing, landing page optimization, and funnel analysis to boost conversions."
         />
         
       </div>
+  </div>
+</section>
+
+      
+
+<section className="py-24 bg-gray-50">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       
       <div className="mb-12 text-center px-4">
+        <div className="flex items-center justify-center gap-3 mb-6"><div className="w-12 h-0.5 bg-[#E53935]"></div><span className="text-[#E53935] text-sm font-semibold tracking-widest uppercase">Why Choose Us</span><div className="w-12 h-0.5 bg-[#E53935]"></div></div>
         <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight">
          Key Benefits
         </h3>
@@ -116,7 +121,8 @@ export default function DigitalMarketingSEOpage() {
           desc="Track ROI and performance with comprehensive analytics and transparent reporting."
         />
       </div>
-
+</div>
+</section>
       
 <CTABox
 backgroundpattern={true}

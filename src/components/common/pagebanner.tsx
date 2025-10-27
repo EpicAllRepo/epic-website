@@ -27,7 +27,7 @@ export default function PageBanner({subtitle, title , desc, buttonhide , imageur
 {imageurl ?
 <div className="mt-16 relative max-w-5xl mx-auto">
   <div className="relative overflow-hidden border-2 border-black/10">
-  <img src={imageurl} alt={title} className="w-full h-[400px] object-cover" />
+  <img src={imageurl} alt={title}   className="w-full h-[400px] object-cover" />
   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
   <div className="absolute top-0 left-0 w-full h-1 bg-[#E53935]"></div>
   </div>

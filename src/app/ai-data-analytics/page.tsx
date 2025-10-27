@@ -2,12 +2,9 @@
 import CoreValues from "@/components/common/corevalues";
 import CTABox from "@/components/common/cta";
 import PageBanner from "@/components/common/pagebanner";
-import {  FaArrowRight, FaRegChartBar, FaRegHeart } from "react-icons/fa";
-import { FiCpu, FiDatabase, FiSmartphone, FiTrendingUp, FiZap } from "react-icons/fi";
-import { GoDatabase, GoZap } from "react-icons/go";
-import { IoLockClosedOutline } from "react-icons/io5";
-import { LuBrain, LuCodeXml, LuUsers } from "react-icons/lu";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import {  FaRegChartBar } from "react-icons/fa";
+import { FiCpu, FiDatabase, FiTrendingUp, FiZap } from "react-icons/fi";
+import { LuBrain } from "react-icons/lu";
 
 export default function AIDataAnalyticspage() {
   return (
@@ -21,6 +18,8 @@ export default function AIDataAnalyticspage() {
       />
 
       {/* Core Values Section */}
+      <section className="py-24 bg-white">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="mb-12 text-center px-4">
         <div className="flex items-center justify-center gap-3 mb-6">
         <div className="w-12 h-0.5 bg-[#E53935]"> </div>
@@ -37,51 +36,51 @@ export default function AIDataAnalyticspage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-20">
         <CoreValues
-           
-        boxhoverbar
+          headinghover
           icon={<LuBrain className="w-7 h-7 text-white" />}
           title="Machine Learning"
           desc="Custom ML models for prediction, classification, and pattern recognition tailored to your needs."
         />
         <CoreValues
-          
-        boxhoverbar
+    headinghover
           icon={<FiTrendingUp  className="w-7 h-7 text-white" />}
           title="Predictive Analytics"
           desc="Forecast trends, customer behavior, and business outcomes with advanced statistical models."
         />
         <CoreValues
-           
-        boxhoverbar
+      headinghover
           icon={<FaRegChartBar  className="w-7 h-7 text-white" />}
           title="Business Intelligence"
           desc="Interactive dashboards, data visualization, and self-service analytics platforms."
         />
         <CoreValues
-           
-        boxhoverbar
+   headinghover
           icon={<FiCpu className="w-7 h-7 text-white" />}
           title="AI Integration"
           desc="Integrate AI capabilities into existing applications with APIs and microservices."
         />
          <CoreValues
-            
-        boxhoverbar
+       headinghover
           icon={<FiDatabase className="w-7 h-7 text-white" />}
           title="Data Engineering"
           desc="Build robust data pipelines, warehouses, and lakes for scalable analytics."
         />
         <CoreValues
-           
-        boxhoverbar
+  headinghover
           icon={<FiZap className="w-7 h-7 text-white" />}
           title="Real-Time Analytics"
           desc="Stream processing and real-time data analysis for instant insights."
         />
-        
+        </div>
       </div>
+      </section>
       
+
+
+      <section className="py-24 bg-gray-50">
+  <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
       <div className="mb-12 text-center px-4">
+        <div className="flex items-center justify-center gap-3 mb-6"><div className="w-12 h-0.5 bg-[#E53935]"></div><span className="text-[#E53935] text-sm font-semibold tracking-widest uppercase">Why Choose Us</span><div className="w-12 h-0.5 bg-[#E53935]"></div></div>
         <h3 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black mb-6 leading-[1.1] tracking-tight">
          Key Benefits
         </h3>
@@ -99,21 +98,22 @@ export default function AIDataAnalyticspage() {
           desc="Automate complex tasks and decision-making with AI-powered solutions."
         />
          <CoreValues
-            headingsize
+             headingsize
         boxhoverbar
           icon={<FiTrendingUp  className="w-7 h-7 text-white" />}
           title="Data-Driven Decisions"
           desc="Make confident business decisions backed by comprehensive data analysis."
         />
         <CoreValues
-           headingsize
+                   headingsize
         boxhoverbar
           icon={<FiZap className="w-7 h-7 text-white" />}
           title="Competitive Advantage"
           desc="Stay ahead of competition with cutting-edge AI and analytics capabilities."
         />
       </div>
-
+</div>
+</section>
       
 <CTABox
 backgroundpattern={true}

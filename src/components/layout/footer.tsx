@@ -52,11 +52,11 @@ export default function Footer() {
                         <div>
                             <h4 className="font-bold text-black mb-6 tracking-tight ">Resources</h4>
                             <ul className="space-y-3">
-                                {resourcesarry?.map((items, index) => {
+                                {services?.map((items, index) => {
                                     return (
                                         
                                             <li key={index}>
-                                                <Link href={items.link} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
+                                                <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
                                             </li>
                                         
                                     )
@@ -66,11 +66,11 @@ export default function Footer() {
                         <div>
                             <h4 className="font-bold text-black mb-6 tracking-tight ">Industries</h4>
                             <ul className="space-y-3">
-                                {legalarry?.map((items, index) => {
+                                {industries?.map((items, index) => {
                                     return (
                                          
                                             <li key={index}>
-                                                <Link href={items.link} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
+                                                <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
                                             </li>
                                         
                                     )
@@ -100,7 +100,7 @@ export default function Footer() {
 const companyarry = [
     {
         name: "About",
-        link: "#",
+        link: "/",
     },
     {
         name: "Services",
@@ -111,36 +111,22 @@ const companyarry = [
         link: "#",
     },
 ]
-const resourcesarry = [
-    {
-        name: "Case Studies",
-        link: "#",
-    },
-    {
-        name: "Blog",
-        link: "#",
-    },
-    {
-        name: "Careers",
-        link: "#",
-    },
-    {
-        name: "Support",
-        link: "#",
-    },
+const services = [
+   { name: 'Custom Web Development', href: '/web-development' },
+      { name: 'Mobile App Development', href: '/mobile-app-development' },
+      { name: 'Cloud & DevOps Solutions', href: '/cloud-devops' },
+      { name: 'Cybersecurity Services', href: '/cybersecurity' },
+      { name: 'AI & Data Analytics', href: '/ai-data-analytics' },
+      { name: 'IT Consulting & Support', href: '/it-consulting' },
+      { name: 'Digital Marketing & SEO', href: '/digital-marketing' },
 ]
-const legalarry = [
-    {
-        name: "Terms of Use",
-        link: "#",
-    },
-    {
-        name: "Privacy Policy",
-        link: "#",
-    },
-    {
-        name: "Security",
-        link: "#",
-    },
+const industries = [
+    { name: 'Finance', href: '/finance' },
+      { name: 'Insurance', href: '/insurance' },
+      { name: 'Manufacturing', href: '/manufacturing' },
+      { name: 'Travel & Hospitality', href: '/travel-hospitality' },
+      { name: 'Healthcare', href: '/healthcare' },
+      { name: 'Media & Entertainment', href: '/media-entertainment' },
+      { name: 'UI/UX Design', href: '/ui-ux-design' },
      
 ]
