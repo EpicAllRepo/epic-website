@@ -404,12 +404,18 @@ export default function HeaderNavigation() {
 
                 {/* Regular Links */}
                 <div className="border-t border-black/5">
-                  <button
-                    onClick={() => scrollToSection('/industries')}
-                    className="w-full px-4 py-3 text-left hover:text-black hover:bg-black/5 transition-all font-medium block text-gray-600"
+
+ <Link
+                    href="/industries"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`w-full px-4 py-3 text-left hover:text-black hover:bg-black/5 transition-all font-medium block ${
+                      location.pathname === '/industries' ? 'text-[#E53935] bg-black/5' : 'text-gray-600'
+                    }`}
                   >
                     Industries
-                  </button>
+                  </Link>
+
+                   
                   <Link
                     href="/about-us"
                     onClick={() => setIsMobileMenuOpen(false)}

@@ -138,7 +138,7 @@ export default function Industries() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="w-12 h-0.5 bg-[#E53935]" />
             <span className="text-[#E53935] text-sm font-semibold tracking-widest uppercase">
-              Industries We Serve
+              Industries We Services
             </span>
             <div className="w-12 h-0.5 bg-[#E53935]" />
           </div>
