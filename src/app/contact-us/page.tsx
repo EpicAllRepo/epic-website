@@ -203,13 +203,13 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/contact"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-8 h-14 bg-white text-black font-semibold hover:bg-black hover:text-white transition-all duration-300"
               >
                 Send a Message
               </Link>
               <Link
-                href="/contact"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-8 h-14 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300"
               >
                 Explore Our Services
