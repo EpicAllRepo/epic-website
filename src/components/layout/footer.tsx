@@ -50,7 +50,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-bold text-black mb-6 tracking-tight ">Resources</h4>
+                            <h4 className="font-bold text-black mb-6 tracking-tight ">Services</h4>
                             <ul className="space-y-3">
                                 {services?.map((items, index) => {
                                     return (
@@ -100,7 +100,7 @@ export default function Footer() {
 const companyarry = [
     {
         name: "About",
-        link: "/",
+        link: "/about-us",
     },
     {
         name: "Services",
@@ -108,7 +108,7 @@ const companyarry = [
     },
     {
         name: "Contact",
-        link: "#",
+        link: "/contact-us",
     },
 ]
 const services = [
