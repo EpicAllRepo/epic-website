@@ -1,9 +1,10 @@
+ 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
-import "./globals.css";
-import Header from "../components/layout/header";
+import "./globals.css"; 
 import Footer from "../components/layout/footer";
+import HeaderNavigation from "@/components/layout/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${inter.variable} ${poppins.className} antialiased`}
       >
-<Header />
+<HeaderNavigation />
 
         {children}
 

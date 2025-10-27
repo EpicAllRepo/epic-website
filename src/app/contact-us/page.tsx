@@ -186,8 +186,8 @@ titlename="Business Hours"
                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 tracking-tight">Have a Project in Mind?</h2>
                 <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-normal">Let&apos;s discuss how we can help transform your business with our innovative solutions</p>
                 <div className="flex flex-wrap items-center justify-center gap-4">
-                  <Link href="/contact" className="inline-flex items-center gap-2 px-8 h-14 bg-white text-black font-semibold hover:bg-black hover:text-white transition-all duration-300">Send a Message</Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 h-14 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300">Explore Our Services</Link>
+                  <Link href="#contact" className="inline-flex items-center gap-2 px-8 h-14 bg-white text-black font-semibold hover:bg-black hover:text-white transition-all duration-300">Send a Message</Link>
+                <Link href="#contact" className="inline-flex items-center gap-2 px-8 h-14 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all duration-300">Explore Our Services</Link>
                 </div>
             </div>
         </div>
