@@ -5,7 +5,6 @@ import { useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import epicLogo from 'figma:asset/430758e90aef2906bebcc4fbb30b4921d5e5d98e.png';
 
 
 export function Hero() {

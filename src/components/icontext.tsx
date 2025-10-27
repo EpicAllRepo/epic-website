@@ -1,8 +1,4 @@
 import { ReactNode } from "react";
-import { LuMapPin } from "react-icons/lu";
-
-
-
 
 interface IconTextProp {
 titlename?:string;

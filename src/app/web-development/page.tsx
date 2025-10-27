@@ -131,7 +131,7 @@ export default function CustomWebDevelopmentPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-8 relative">
             <div className="text-center">
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1] tracking-tight">Ready to Build Your Web Application?</h2>
-                <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed font-normal">Let's discuss how our custom web development services can bring your vision to life</p>
+                <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed font-normal">Let&apos;s discuss how our custom web development services can bring your vision to life</p>
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-[#E53935] font-bold hover:bg-gray-100 transition-all duration-300 group text-lg">Contact Us Today <p><FaArrowRight /></p></Link>
                 
