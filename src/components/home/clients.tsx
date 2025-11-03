@@ -11,16 +11,16 @@ interface ClientLogo {
 
 export function Clients() {
   const clientLogos: ClientLogo[] = [
-    { name: 'Microsoft', image: 'https://images.unsplash.com/photo-1662947036644-ecfde1221ac7?...' },
-    { name: 'Amazon', image: 'https://images.unsplash.com/photo-1704204656144-3dd12c110dd8?...' },
-    { name: 'Google', image: 'https://images.unsplash.com/photo-1662947190722-5d272f82a526?...' },
-    { name: 'Yes Bank', image: 'https://images.unsplash.com/photo-1576765915649-b6f4be4ec5c8?...' },
-    { name: 'AWS', image: 'https://images.unsplash.com/photo-1543525090-07dc28d19bb4?...' },
-    { name: 'Trade India', image: 'https://images.unsplash.com/photo-1760138270903-d95903188730?...' },
-    { name: 'Blue Star', image: 'https://images.unsplash.com/photo-1533558527255-407147f3ae72?...' },
-    { name: 'Airtel', image: 'https://images.unsplash.com/photo-1566181512663-87e30b008c98?...' },
-    { name: 'CABX', image: 'https://images.unsplash.com/photo-1760138270903-d95903188730?...' },
-    { name: 'BedsDivans', image: 'https://images.unsplash.com/photo-1680503146454-0fe569cef4eb?...' },
+    { name: 'Microsoft', image: '/client-logos/Group-290167.png' },
+    { name: 'Amazon', image: '/client-logos/Group-290168.png' },
+    { name: 'Google', image: '/client-logos/Group-290169.png' },
+    { name: 'Yes Bank', image: '/client-logos/Group-290170.png' },
+    { name: 'AWS', image: '/client-logos/Group-290171.png' },
+    { name: 'Trade India', image: '/client-logos/Group-290172.png' },
+    { name: 'Blue Star', image: '/client-logos/Group-290173.png' },
+    { name: 'Airtel', image: '/client-logos/Group-290174.png' },
+    { name: 'CABX', image: '/client-logos/Group-290175.png' },
+    { name: 'BedsDivans', image: '/client-logos/Group-290186.png' },
   ];
 
   return (

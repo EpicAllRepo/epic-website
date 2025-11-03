@@ -100,7 +100,7 @@ export function About() {
               <div className="absolute -inset-4 bg-[#E53935] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity" />
               <div className="relative aspect-[4/3] overflow-hidden border border-gray-200">
                 <Image
-                  src="https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?auto=format&fit=crop&w=1080&q=80"
+                  src="/We-are-Epic-Global.png"
                   alt="Technology Infrastructure"
                   fill
                   className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"
@@ -134,7 +134,7 @@ export function About() {
                 <div className="absolute -inset-4 bg-[#E53935] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity" />
                 <div className="relative aspect-[4/3] overflow-hidden border border-gray-200">
                   <Image
-                    src="https://images.unsplash.com/photo-1758691736804-4e88c52ad58b?auto=format&fit=crop&w=1080&q=80"
+                    src="/Our-Dream.png"
                     alt="Team Innovation"
                     fill
                     className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500"

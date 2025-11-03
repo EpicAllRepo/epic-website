@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Building2, Factory, Heart, Plane, Shield, Tv } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Cloud,
@@ -19,13 +19,34 @@ import {
   Star,
   GraduationCap,
   ArrowRight,
+  Banknote, // Example icon for Finance
+  HeartPulse, // Example icon for Healthcare
+  GraduationCap as Cap, // Using Cap as a different name for Education icon
+  ShoppingBag, // Example icon for E-commerce
+  Building, // Example icon for Real Estate
 } from "lucide-react";
+
+// The MegaMenuContent component remains the same. I've omitted it here for brevity,
+// but it needs to stay in your file and use the updated prop type if you make that change.
+
+interface MenuItem {
+  icon: any; // Type of Lucide icon component
+  title: string;
+  description: string;
+  href: string;
+  image: string;
+}
+
+
+// --- Component Start ---
 
 export default function HeaderNavigation() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false); // New state for mobile industries dropdown
+
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -33,12 +54,14 @@ export default function HeaderNavigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const productsItems = [
+  // Your existing productsItems and servicesItems...
+
+  const productsItems: MenuItem[] = [
     {
       icon: Users,
       title: "HRMS 360",
       description: "Complete HR management and payroll system",
-      href: "#services",
+      href: "/products/hrms-360",
       image:
         "https://images.unsplash.com/photo-1668511237388-404cc7e56e9d?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
@@ -46,7 +69,7 @@ export default function HeaderNavigation() {
       icon: Phone,
       title: "CABX",
       description: "Cloud-based telephony and call center solution",
-      href: "#services",
+      href: "/products/cabx",
       image:
         "https://images.unsplash.com/photo-1616711248662-666c8aa10308?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
@@ -54,7 +77,7 @@ export default function HeaderNavigation() {
       icon: Bot,
       title: "Troxi AI",
       description: "AI-powered automation and intelligent assistant",
-      href: "#services",
+      href: "/products/Troxi-AI",
       image:
         "https://images.unsplash.com/photo-1625314887424-9f190599bd56?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
@@ -62,21 +85,21 @@ export default function HeaderNavigation() {
       icon: Star,
       title: "Astrojyotish",
       description: "Vedic astrology and horoscope platform",
-      href: "#services",
+      href: "/products/Astrojyotish",
       image:
         "https://images.unsplash.com/photo-1614089254151-676cc373b01e?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
     {
-      icon: GraduationCap,
+      icon: Cap,
       title: "Coach Axis",
       description: "Professional coaching and training platform",
-      href: "#services",
+      href: "/products/Coach-Axis",
       image:
         "https://images.unsplash.com/photo-1554686177-87b3c0e1a575?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
   ];
 
-  const servicesItems = [
+  const servicesItems: MenuItem[] = [
     {
       icon: Code2,
       title: "Custom Web Development",
@@ -140,7 +163,52 @@ export default function HeaderNavigation() {
       image:
         "https://images.unsplash.com/photo-1557838923-2985c318be48?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
-    
+  ];
+
+  // 1. New Data for Industries
+  const industriesItems: MenuItem[] = [
+   {
+    icon: Building2,
+    title: 'Finance',
+    description: 'Digital banking, fintech solutions, and secure payment processing systems',
+    image: 'https://images.unsplash.com/photo-1553801613-9b225d58f429?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    href: '/finance',
+  },
+  {
+    icon: Shield,
+    title: 'Insurance',
+    description: 'Claims processing, risk management, and policy administration platforms',
+    image: 'https://images.unsplash.com/photo-1747114936280-257b662bfe72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    href: '/insurance',
+  },
+  {
+    icon: Factory,
+    title: 'Manufacturing',
+    description: 'Smart factories, IoT integration, and supply chain optimization solutions',
+    image: 'https://images.unsplash.com/photo-1717386255773-1e3037c81788?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    href: '/manufacturing',
+  },
+  {
+    icon: Plane,
+    title: 'Travel & Hospitality',
+    description: 'Booking systems, guest management, and personalized travel experiences',
+    image: 'https://images.unsplash.com/photo-1678116964296-85135c31fcbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    href: '/travel-hospitality',
+  },
+  {
+    icon: Heart,
+    title: 'Healthcare',
+    description: 'Patient care systems, telemedicine, and health data management platforms',
+    image: 'https://images.unsplash.com/photo-1668874896975-7f874c90600a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    href: '/healthcare',
+  },
+  {
+    icon: Tv,
+    title: 'Media & Entertainment',
+    description: 'Content delivery, streaming platforms, and digital media management',
+    image: 'https://images.unsplash.com/photo-1760404700115-461c3872e160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    href: '/media-entertainment',
+  },
   ];
 
   const scrollToSection = (href: string) => {
@@ -155,7 +223,7 @@ export default function HeaderNavigation() {
   const MegaMenuContent = ({
     items,
   }: {
-    items: typeof productsItems;
+    items: MenuItem[]; // Changed to use the defined MenuItem type
   }) => {
     const FeaturedIcon = items[0].icon;
 
@@ -174,8 +242,12 @@ export default function HeaderNavigation() {
               <div className="w-12 h-12 bg-[#E53935] flex items-center justify-center mb-3">
                 <FeaturedIcon className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-bold text-white mb-2 text-left">{items[0].title}</h4>
-              <p className="text-sm text-white/80 text-left">{items[0].description}</p>
+              <h4 className="font-bold text-white mb-2 text-left">
+                {items[0].title}
+              </h4>
+              <p className="text-sm text-white/80 text-left">
+                {items[0].description}
+              </p>
             </div>
           </div>
 
@@ -186,7 +258,6 @@ export default function HeaderNavigation() {
                 <Link
                   key={item.title}
                   href={item.href}
-                //   onClick={() => scrollToSection(item.href)}
                   className="group flex items-start gap-4 p-4 hover:bg-black/[0.02] transition-all border border-transparent hover:border-[#E53935]/20"
                 >
                   <div className="w-10 h-10 bg-[#E53935] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -196,7 +267,9 @@ export default function HeaderNavigation() {
                     <div className="text-sm font-semibold text-black mb-1 group-hover:text-[#E53935] text-left">
                       {item.title}
                     </div>
-                    <div className="text-xs text-gray-600 text-left">{item.description}</div>
+                    <div className="text-xs text-gray-600 text-left">
+                      {item.description}
+                    </div>
                   </div>
                   <ArrowRight className="w-4 h-4 text-gray-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                 </Link>
@@ -297,23 +370,39 @@ export default function HeaderNavigation() {
               </AnimatePresence>
             </div>
 
-            {/* Other Links */}
-            <Link
-              href="/industries"
-              className={`px-4 py-2 text-sm font-medium relative group ${
-                pathname === "/about" ? "text-[#E53935]" : "text-gray-600"
-              }`}
+            {/* 2. Industries - New Dropdown Structure */}
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveMegaMenu("industries")}
+              onMouseLeave={() => setActiveMegaMenu(null)}
             >
-              Industries
-              <span
-                className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#E53935] ${
-                  pathname === "/industries"
-                    ? "scale-x-100"
-                    : "scale-x-0 group-hover:scale-x-100"
-                } transition-transform origin-left`}
-              />
-            </Link>
+              <button className="px-4 py-2 text-sm text-gray-600 hover:text-black flex items-center gap-1 group">
+                Industries
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    activeMegaMenu === "industries" ? "rotate-180" : ""
+                  }`}
+                />
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#E53935] scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              </button>
 
+              <AnimatePresence>
+                {activeMegaMenu === "industries" && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[850px] bg-white border border-black/10 shadow-xl" // Adjusted width for Industries
+                  >
+                    <MegaMenuContent items={industriesItems} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            {/* End of Industries Desktop Dropdown */}
+
+            {/* Other Links */}
             <Link
               href="/about-us"
               className={`px-4 py-2 text-sm font-medium relative group ${
@@ -354,20 +443,22 @@ export default function HeaderNavigation() {
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
- </div>
-            <AnimatePresence>
+        </div>
+        <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden border-t border-black/10 bg-white"
             >
               <nav className="py-6 space-y-1 max-h-[calc(100vh-5rem)] overflow-y-auto">
-                {/* Products */}
+                {/* Products Mobile */}
                 <div className="px-4 py-2">
-                  <div className="text-xs text-[#E53935] uppercase tracking-widest font-semibold mb-2">Products</div>
+                  <div className="text-xs text-[#E53935] uppercase tracking-widest font-semibold mb-2">
+                    Products
+                  </div>
                   {productsItems.map((item) => {
                     const ItemIcon = item.icon;
                     return (
@@ -377,50 +468,103 @@ export default function HeaderNavigation() {
                         className="w-full flex items-center gap-3 py-2 text-left text-gray-600 hover:text-black transition-colors"
                       >
                         <ItemIcon className="w-4 h-4 text-[#E53935]" />
-                        <span className="text-sm font-medium">{item.title}</span>
+                        <span className="text-sm font-medium">
+                          {item.title}
+                        </span>
                       </button>
                     );
                   })}
                 </div>
 
-                {/* Services */}
+                {/* Services Mobile */}
                 <div className="px-4 py-2 border-t border-black/5">
-                  <div className="text-xs text-[#E53935] uppercase tracking-widest font-semibold mb-2">Services</div>
+                  <div className="text-xs text-[#E53935] uppercase tracking-widest font-semibold mb-2">
+                    Services
+                  </div>
                   {servicesItems.map((item) => {
                     const ItemIcon = item.icon;
                     return (
                       <Link
-                      href={item.href}
+                        href={item.href}
                         key={item.title}
-                        onClick={() => scrollToSection(item.href)}
+                        onClick={() => {
+                            // Link component handles navigation, we just close the menu
+                            setIsMobileMenuOpen(false); 
+                            setActiveMegaMenu(null);
+                        }}
                         className="w-full flex items-center gap-3 py-2 text-left text-gray-600 hover:text-black transition-colors"
                       >
                         <ItemIcon className="w-4 h-4 text-[#E53935]" />
-                        <span className="text-sm font-medium">{item.title}</span>
+                        <span className="text-sm font-medium">
+                          {item.title}
+                        </span>
                       </Link>
                     );
                   })}
                 </div>
 
-                {/* Regular Links */}
-                <div className="border-t border-black/5">
-
- <Link
-                    href="/industries"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`w-full px-4 py-3 text-left hover:text-black hover:bg-black/5 transition-all font-medium block ${
-                      location.pathname === '/industries' ? 'text-[#E53935] bg-black/5' : 'text-gray-600'
-                    }`}
+                {/* 3. Industries Mobile - New Collapsible Section */}
+                <div className="px-4 py-2 border-t border-black/5">
+                  <button
+                    onClick={() =>
+                      setMobileIndustriesOpen(!mobileIndustriesOpen)
+                    }
+                    className="w-full flex justify-between items-center py-2 text-left text-[#E53935] hover:text-black transition-colors"
                   >
-                    Industries
-                  </Link>
+                    <div className="text-xs uppercase tracking-widest font-semibold">
+                      Industries
+                    </div>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        mobileIndustriesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-                   
+                  <AnimatePresence>
+                    {mobileIndustriesOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden mt-1"
+                      >
+                        {industriesItems.map((item) => {
+                          const ItemIcon = item.icon;
+                          return (
+                            <Link
+                              href={item.href}
+                              key={item.title}
+                              onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                setMobileIndustriesOpen(false);
+                                setActiveMegaMenu(null);
+                              }}
+                              className="w-full flex items-center gap-3 py-2 pl-4 text-left text-gray-600 hover:text-black transition-colors"
+                            >
+                              <ItemIcon className="w-4 h-4 text-[#E53935]" />
+                              <span className="text-sm font-medium">
+                                {item.title}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+                {/* End of Industries Mobile */}
+
+                {/* Regular Links (Adjusted) */}
+                <div className="border-t border-black/5">
                   <Link
                     href="/about-us"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`w-full px-4 py-3 text-left hover:text-black hover:bg-black/5 transition-all font-medium block ${
-                      location.pathname === '/about-us' ? 'text-[#E53935] bg-black/5' : 'text-gray-600'
+                      pathname === "/about-us"
+                        ? "text-[#E53935] bg-black/5"
+                        : "text-gray-600"
                     }`}
                   >
                     About
@@ -429,7 +573,9 @@ export default function HeaderNavigation() {
                     href="/contact-us"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`w-full px-4 py-3 text-left hover:text-black hover:bg-black/5 transition-all font-medium block ${
-                      location.pathname === '/contact-us' ? 'text-[#E53935] bg-black/5' : 'text-gray-600'
+                      pathname === "/contact-us"
+                        ? "text-[#E53935] bg-black/5"
+                        : "text-gray-600"
                     }`}
                   >
                     Contact Us
@@ -439,7 +585,6 @@ export default function HeaderNavigation() {
             </motion.div>
           )}
         </AnimatePresence>
-       
       </div>
     </motion.header>
   );

@@ -85,7 +85,7 @@ desc="Maintaining transparency and ethical practices in all we do"
 
 
 
-        <section className="relative py-32 bg-white">
+        {/* <section className="relative py-32 bg-white">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(229,57,53,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(229,57,53,0.02)_1px,transparent_1px)] bg-[size:80px_80px]"></div>
           <div className="max-w-[1400px] mx-auto px-6 lg:px-8 relative">
             <div className="mb-20 text-center">
@@ -107,7 +107,7 @@ desc="Maintaining transparency and ethical practices in all we do"
 </div>
 
           </div>
-        </section>
+        </section> */}
 
 
 

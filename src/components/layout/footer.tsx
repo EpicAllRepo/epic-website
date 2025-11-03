@@ -5,6 +5,66 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import FooterMid from "./footermid";
 import BootomFooter from "./bottomfooter";
 
+// 🎯 RENAMED AND UPDATED ARRAY FOR PRODUCTS
+const products = [
+    {
+        name: "HRMS 360",
+      description: "Complete HR management and payroll system",
+      href: "/products/hrms-360",
+      image:
+        "https://images.unsplash.com/photo-1668511237388-404cc7e56e9d?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
+        
+    },
+    {
+        name: "CABX",
+      description: "Cloud-based telephony and call center solution",
+      href: "/products/cabx",
+      image:
+        "https://images.unsplash.com/photo-1616711248662-666c8aa10308?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
+    },
+    {
+        name: "Troxi AI",
+      description: "AI-powered automation and intelligent assistant",
+      href: "/products/Troxi-AI",
+      image:
+        "https://images.unsplash.com/photo-1625314887424-9f190599bd56?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
+    },
+    {
+        name: "Astrojyotish",
+      description: "Vedic astrology and horoscope platform",
+      href: "/products/Astrojyotish",
+      image:
+        "https://images.unsplash.com/photo-1614089254151-676cc373b01e?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
+    },
+    {
+        name: "Coach Axis",
+      description: "Professional coaching and training platform",
+      href: "/products/Coach-Axis",
+      image:
+        "https://images.unsplash.com/photo-1554686177-87b3c0e1a575?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
+    },
+];
+
+const services = [
+    { name: 'Custom Web Development', href: '/web-development' },
+    { name: 'Mobile App Development', href: '/mobile-app-development' },
+    { name: 'Cloud & DevOps Solutions', href: '/cloud-devops' },
+    { name: 'Cybersecurity Services', href: '/cybersecurity' },
+    { name: 'AI & Data Analytics', href: '/ai-data-analytics' },
+    { name: 'IT Consulting & Support', href: '/it-consulting' },
+    { name: 'Digital Marketing & SEO', href: '/digital-marketing' },
+];
+
+const industries = [
+    { name: 'Finance', href: '/finance' },
+    { name: 'Insurance', href: '/insurance' },
+    { name: 'Manufacturing', href: '/manufacturing' },
+    { name: 'Travel & Hospitality', href: '/travel-hospitality' },
+    { name: 'Healthcare', href: '/healthcare' },
+    { name: 'Media & Entertainment', href: '/media-entertainment' },
+    { name: 'UI/UX Design', href: '/ui-ux-design' },
+];
+
 export default function Footer() {
     return (
         <>
@@ -36,30 +96,30 @@ export default function Footer() {
 
                             </div>
                         </div>
+                        
+                        {/* 🎯 REPLACED COMPANY SECTION WITH PRODUCTS */}
                         <div>
-                            <h4 className="font-bold text-black mb-6 tracking-tight ">Company</h4>
-                            <ul className="space-y-3">
-                                {companyarry?.map((items, index) => {
-                                    return (
-                                        
-                                            <li key={index}>
-                                                <Link href={items.link} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
-                                            </li>
-                                        
-                                    )
+            <h4 className="font-bold text-black mb-6 tracking-tight ">Products</h4>
+            <ul className="space-y-3">
+                {products?.map((items, index) => {
+                    return (
+                        <li key={index}>
+                            <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
+                        </li>
+                    )
                                 })}
                             </ul>
                         </div>
+                        {/* END OF PRODUCTS SECTION */}
+                        
                         <div>
                             <h4 className="font-bold text-black mb-6 tracking-tight ">Services</h4>
                             <ul className="space-y-3">
                                 {services?.map((items, index) => {
                                     return (
-                                        
-                                            <li key={index}>
-                                                <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
-                                            </li>
-                                        
+                                        <li key={index}>
+                                            <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
+                                        </li>
                                     )
                                 })}
                             </ul>
@@ -69,11 +129,9 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {industries?.map((items, index) => {
                                     return (
-                                         
-                                            <li key={index}>
-                                                <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
-                                            </li>
-                                        
+                                        <li key={index}>
+                                            <Link href={items.href} className="text-gray-600 hover:text-[#E53935] transition-colors inline-block hover:translate-x-1 duration-200 font-normal text-left">{items.name}</Link>
+                                        </li>
                                     )
                                 })}
                             </ul>
@@ -84,7 +142,7 @@ export default function Footer() {
 
                     <FooterMid />
 
-<BootomFooter />
+                    <BootomFooter />
 
                 </div>
 
@@ -94,40 +152,3 @@ export default function Footer() {
     )
 }
 
-
-
-
-
-const companyarry = [
-    {
-        name: "About",
-        link: "/about-us",
-    },
-    {
-        name: "Services",
-        link: "#",
-    },
-    {
-        name: "Contact",
-        link: "/contact-us",
-    },
-]
-const services = [
-   { name: 'Custom Web Development', href: '/web-development' },
-      { name: 'Mobile App Development', href: '/mobile-app-development' },
-      { name: 'Cloud & DevOps Solutions', href: '/cloud-devops' },
-      { name: 'Cybersecurity Services', href: '/cybersecurity' },
-      { name: 'AI & Data Analytics', href: '/ai-data-analytics' },
-      { name: 'IT Consulting & Support', href: '/it-consulting' },
-      { name: 'Digital Marketing & SEO', href: '/digital-marketing' },
-]
-const industries = [
-    { name: 'Finance', href: '/finance' },
-      { name: 'Insurance', href: '/insurance' },
-      { name: 'Manufacturing', href: '/manufacturing' },
-      { name: 'Travel & Hospitality', href: '/travel-hospitality' },
-      { name: 'Healthcare', href: '/healthcare' },
-      { name: 'Media & Entertainment', href: '/media-entertainment' },
-      { name: 'UI/UX Design', href: '/ui-ux-design' },
-     
-]
