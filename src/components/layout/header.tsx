@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Building2, Factory, Heart, Plane, Shield, Tv } from "lucide-react";
+import { Menu, X, ChevronDown, Building2, Factory, Heart, Plane, Shield, Tv, UserStar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Cloud,
@@ -98,6 +98,7 @@ export default function HeaderNavigation() {
         "https://images.unsplash.com/photo-1554686177-87b3c0e1a575?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
   ];
+  const [activeItem, setActiveItem] = useState(productsItems[0]);
 
   const servicesItems: MenuItem[] = [
     {
@@ -163,6 +164,15 @@ export default function HeaderNavigation() {
       image:
         "https://images.unsplash.com/photo-1557838923-2985c318be48?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
     },
+    {
+      icon: UserStar,
+      title: "Review Management",
+      description:
+        "Showcasing customer feedback, testimonials, and social proof to build trust and credibility",
+      href: "/review-management",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&w=1080&q=80",
+    }
   ];
 
   // 1. New Data for Industries
@@ -225,15 +235,16 @@ export default function HeaderNavigation() {
   }: {
     items: MenuItem[]; // Changed to use the defined MenuItem type
   }) => {
-    const FeaturedIcon = items[0].icon;
+    const FeaturedIcon = activeItem.icon;
 
     return (
       <div className="p-8">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-4 relative min-h-[300px] group">
             <Image
-              src={items[0].image}
-              alt={items[0].title}
+              src={activeItem.image}
+              alt={activeItem.title}
+              priority
               fill
               className="object-cover"
             />
@@ -243,10 +254,10 @@ export default function HeaderNavigation() {
                 <FeaturedIcon className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-bold text-white mb-2 text-left">
-                {items[0].title}
+                {activeItem.title}
               </h4>
               <p className="text-sm text-white/80 text-left">
-                {items[0].description}
+                {activeItem.description}
               </p>
             </div>
           </div>
@@ -258,6 +269,7 @@ export default function HeaderNavigation() {
                 <Link
                   key={item.title}
                   href={item.href}
+                  onMouseEnter={() => setActiveItem(item)}
                   className="group flex items-start gap-4 p-4 hover:bg-black/[0.02] transition-all border border-transparent hover:border-[#E53935]/20"
                 >
                   <div className="w-10 h-10 bg-[#E53935] flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -310,7 +322,7 @@ export default function HeaderNavigation() {
           <nav className="hidden lg:flex items-center gap-1">
             {/* Products */}
             <div
-              className="relative"
+              // className="relative"
               onMouseEnter={() => setActiveMegaMenu("products")}
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
@@ -331,7 +343,7 @@ export default function HeaderNavigation() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[850px] bg-white border border-black/10 shadow-xl"
+                    className="absolute top-full right-0 mt-2 w-[850px] bg-white border border-black/10 shadow-xl"
                   >
                     <MegaMenuContent items={productsItems} />
                   </motion.div>
@@ -341,7 +353,7 @@ export default function HeaderNavigation() {
 
             {/* Services */}
             <div
-              className="relative"
+              // className="relative"
               onMouseEnter={() => setActiveMegaMenu("services")}
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
@@ -362,7 +374,7 @@ export default function HeaderNavigation() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1100px] bg-white border border-black/10 shadow-xl"
+                    className="absolute top-full right-0 mt-2 w-[1100px] bg-white border border-black/10 shadow-xl"
                   >
                     <MegaMenuContent items={servicesItems} />
                   </motion.div>
@@ -372,7 +384,7 @@ export default function HeaderNavigation() {
 
             {/* 2. Industries - New Dropdown Structure */}
             <div
-              className="relative"
+              // className="relative"
               onMouseEnter={() => setActiveMegaMenu("industries")}
               onMouseLeave={() => setActiveMegaMenu(null)}
             >
@@ -393,7 +405,7 @@ export default function HeaderNavigation() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[850px] bg-white border border-black/10 shadow-xl" // Adjusted width for Industries
+                    className="absolute top-full right-0 mt-2 w-[850px] bg-white border border-black/10 shadow-xl" // Adjusted width for Industries
                   >
                     <MegaMenuContent items={industriesItems} />
                   </motion.div>

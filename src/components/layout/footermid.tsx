@@ -58,9 +58,9 @@ export default function FooterMid() {
 const footerMid = [
 { name: "About", href: "/about-us" },
   { name: "Contact", href: "/contact-us" },
-  { name: "Accreditations and Certifications", href: "#" },
+  // { name: "Accreditations and Certifications", href: "#" },
   { name: "Terms of Use", href: "/terms" },
-  { name: "Privacy Policy", href: "#" },
-  { name: "Blog", href: "#" }
+  // { name: "Privacy Policy", href: "#" },
+  // { name: "Blog", href: "#" }
 ]
   

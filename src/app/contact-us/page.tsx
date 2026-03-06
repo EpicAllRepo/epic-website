@@ -139,13 +139,13 @@ export default function ContactPage() {
                     url="mailto:info@epicglobal.co.in"
                   />
                   <IconText
-                    name="+1 416 123 4567"
+                    name="+91 120 417 6500"
                     icon={<FiPhone />}
                     titlename="Phone"
-                    url="tel:+14161234567"
+                    url="tel:+911204176500"
                   />
                   <IconText
-                    name="Ontario, L3R 3B3, Canada"
+                    name="H-143 (b-03), H Block, Sector 63, Noida, Uttar Pradesh 201301"
                     icon={<LuMapPin />}
                     titlename="Office Address"
                   />
@@ -228,8 +228,8 @@ const addrearry = [
     name: "India Office",
     location: "Noida, Uttar Pradesh",
     Address: "H-143 (b-03), H Block, Sector 63, Noida, Uttar Pradesh 201301",
-    Phone: "+91 9876543210",
-    Email: "contact@epicglobal.com",
+    Phone: "+91 120 417 6500",
+    Email: "info@epicglobal.com",
     BusinessHours: "Monday - Friday, 9:00 AM – 6:00 PM IST",
     bg: "/noida.jpg",
   },
@@ -238,8 +238,8 @@ const addrearry = [
     name: "UK Office",
     location: "Bilston, England",
     Address: "Unit 8A Stag Industrial Estate Oxford Street Bilston WV14 7HZ",
-    Phone: "+44 1902 123456",
-    Email: "contact@epicglobal.com",
+    Phone: "+91 120 417 6500",
+    Email: "info@epicglobal.com",
     BusinessHours: "Monday - Friday, 9:00 AM – 5:00 PM GMT",
     bg: "/uk.jpg",
   },
@@ -248,8 +248,8 @@ const addrearry = [
     name: "Canada Office",
     location: "Ontario, Canada",
     Address: "Ontario, L3R 3B3, Canada",
-    Phone: "+1 416 123 4567",
-    Email: "contact@epicglobal.com",
+    Phone: "+91 120 417 6500",
+    Email: "info@epicglobal.com",
     BusinessHours: "Monday - Friday, 9:00 AM – 5:00 PM GMT",
     bg: "/icon.jpg",
   },
